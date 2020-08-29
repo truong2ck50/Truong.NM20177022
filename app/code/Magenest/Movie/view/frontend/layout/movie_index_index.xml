@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Magenest Movie</title>
+    </head>
+    <body>
+        <!--        <remove name="wishlist_sidebar" />-->
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceContainer name="content">
+            <block class="Magenest\Movie\Block\Newfilms"
+                   name="new_films" template="Magenest_Movie::newfilms.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

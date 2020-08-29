@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_save_before">
+        <observer name="magenest_customer_register_success"
+                  instance="Magenest\Movie\Observer\ChangedFistNameCustomer" />
+    </event>
+    <event name="movie_movie_prepare_save">
+        <observer name="magenest_movie_movie_prepare_save"
+                  instance="Magenest\Movie\Observer\ChangedRatingMovie" />
+    </event>
+    <event name="admin_system_config_changed_section_movie">
+        <observer name="magenest_admin_system_config_changed_section_movie"
+                  instance="Magenest\Movie\Observer\ChangedPingConfig" />
+    </event>
+</config>

@@ -1,0 +1,9 @@
+<h2>New Films</h2>
+<ul>
+    <?php foreach ($block->getFilms() as $films): ?>
+        <li><?php echo $films->getData('movie_name') ?></li>
+        <p><?php echo 'Dircetor: '.$films->getData('director_name') ?></p>
+        <p><?php echo 'Actor: '?></p>
+            <?php echo ($block->getActor($films->getData('movie_id'))) ?>
+    <?php endforeach; ?>
+</ul>
